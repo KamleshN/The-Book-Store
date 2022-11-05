@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Book Library</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="navbar-header">
+      <ul class="navbar">
+        <img class="logo" src="./assets/bookshelf-icon-symbol-template-graphic-260nw-2043035636.jpeg"/>
+        <div class="navbar-heading">The Book Store</div>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="search-container">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search by Book name.."
+        />
+        <button id="search">Search</button>
+        <input
+          type="search"
+          id="search-input-author"
+          placeholder="Search by Author name.."
+        />
+        <button id="search-author">Search</button>
+      </div>
+      <div id="buttons">
+        <span class="genre">Genre :</span>
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('Fiction')">
+          Fiction
+        </button>
+        <button class="button-value" onclick="filterProduct('Non-Fiction')">
+          Non-Fiction
+        </button>
+        <button class="button-value" onclick="filterProduct('Autobiography')">
+          Autobiography
+        </button>
+        <button class="button-value" onclick="filterProduct('Thriller')">
+          Thriller
+        </button>
+      </div>
+      <div id="buttons-year">
+        <span class="genre">Year :</span>
+        <button class="button-value-year" onclick="filterProduct('all')">
+          All
+        </button>
+        <button class="button-value-year" onclick="filterProduct('2020')">
+          2020
+        </button>
+        <button class="button-value-year" onclick="filterProduct('2019')">
+          2019
+        </button>
+        <button class="button-value-year" onclick="filterProduct('2018')">
+          2018
+        </button>
+        <button class="button-value-year" onclick="filterProduct('<2018')">
+          &lt;2018
+        </button>
+      </div>
+
+      <div class="visible"></div>
+      <div id="products"></div>
+    </div>
+    <footer class="footer">
+        <img class="logo" src="./assets/bookshelf-icon-symbol-template-graphic-260nw-2043035636.jpeg"/>
+        <div class="footer-text">Made by Kamlesh &lt;/&gt;</div>
+    </footer>
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
